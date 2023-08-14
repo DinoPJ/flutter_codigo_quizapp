@@ -50,14 +50,10 @@ class _QuizPageState extends State<QuizPage> {
         ],
       ).show();
 
-      quizBrain.retasQuinz();//reiniciamos el quinz
-      scoreKeeper.clear();//para limpiar la lista de iconos almacenados en la parte de abajo de los botones.
-      setState(() {
-
-      });
-
-
-
+      quizBrain.retasQuinz(); //reiniciamos el quinz
+      scoreKeeper
+          .clear(); //para limpiar la lista de iconos almacenados en la parte de abajo de los botones.
+      setState(() {});
     } else {
       bool correctAnswer = quizBrain.getQuestionAnswer();
 
@@ -114,9 +110,7 @@ class _QuizPageState extends State<QuizPage> {
               padding: const EdgeInsets.all(8.0),
               child: MaterialButton(
                 onPressed: () {
-               checkAnswer(true);
-
-
+                  checkAnswer(true);
                 },
                 child: Text(
                   "Verdadero",
